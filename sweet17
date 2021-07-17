@@ -1,0 +1,28 @@
+package sweetseventeen;
+import java.util.*;
+public class SweetSeventeen {
+
+   public static void main(String[] args){
+       int chn=0;double sum=0;char ch;
+       Scanner sc=new Scanner(System.in);
+       String str=sc.nextLine();
+       int l=str.length();
+       for(int i=0;i<l;i++){
+           ch=str.charAt(l-1-i);
+           if(ch>=65 && ch<=90)
+           {
+               if(ch=='A') chn=10;
+               else if(ch=='B')  chn=11;
+               else if(ch=='C')  chn=12;
+               else if(ch=='D')  chn=13;
+               else if(ch=='E')  chn=14;
+               else if(ch=='F')  chn=15;
+               else if (ch=='G')  chn=16;
+                        
+           }
+           else chn=ch-48;
+           sum=sum+(chn*(Math.pow(17,i)));
+       }
+      System.out.println(sum);
+    }
+}
